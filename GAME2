@@ -1,0 +1,31 @@
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+using namespace std;
+
+int main()
+{
+	srand(time(NULL));
+	int	pc = 0;
+	int user = 0;
+	char exit = '1';
+	cout << "Welcome to GUESS THE NUMBER. Your aim is to guess the number from 1 to 10 " << endl;
+	while (exit == '1')
+	{
+		pc = rand() % 9 + 1;
+		cin >> user;
+		if (user != pc)
+		{
+			cout << "WRONG" << endl;
+		}
+		else
+		{
+			cout << "RIGHT" << endl;
+			cout << "Again? For exit enter 0, for again enter 1" << endl;
+			cin >> exit;
+		}
+	}
+	cout << "BYE - BYE" << endl;
+
+    return 0;
+}
